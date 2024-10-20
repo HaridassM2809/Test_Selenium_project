@@ -24,5 +24,13 @@ public class TypesOfVariable {
     }
     
 //how to call class variable inside a static method
+    boolean a3 = false;
+    char bb = 'H';
+    static void main4(String[] args) { //default method
+    	//ClassName objectName = new ClassVariable ();
+    	TypesOfVariable hari = new TypesOfVariable(); //object creation 
+    	System.out.println(hari.a3);
+    	System.out.println(hari.bb);
+    }
     
 }
