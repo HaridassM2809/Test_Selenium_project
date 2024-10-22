@@ -11,7 +11,7 @@ public class TypesOfVariable {
 //Class variable //mostly class var is non-static variable
     int a1 = 10;  //class variable
     String b = "Hello"; //class variable
-    private static void main2(String[] args) {
+    private static void method1(String[] args) {
 //    	System.out.println(a1); //you can't call class non-static var in a static method without object creation
     }
     

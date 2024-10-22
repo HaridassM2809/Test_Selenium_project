@@ -15,7 +15,7 @@ public class StaticVariable {
 	// Static var in a non-static method
 	static char a2='B';
 	static short b2=10;
-	private static void main3(String[] args) {
+	private static void method1() {
 		System.out.println(a2);
 		System.out.println(b2);
 	}
