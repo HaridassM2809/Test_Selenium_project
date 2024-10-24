@@ -16,11 +16,11 @@ public class ClassC {
 //		We are calling/using static variable from ClassA and ClassC is not a sub class for ClassA
 //		So we need to create object for ClassA
 //    	Although we are calling Static class var we can't directly call in non static method because ClassC is not a sub class for ClassA 
-		ClassA ist = new ClassA();
-		System.out.println(ist.aa);
-		System.out.println(ist.bb);
-//		System.out.println(ist.cc);
-		System.out.println(ist.dd);	
+//		ClassA ist = new ClassA();
+		System.out.println(ClassA.aa);
+		System.out.println(ClassA.bb);
+//		System.out.println(ClassA.cc);
+		System.out.println(ClassA.dd);	
 	}
 	static public void method6() {
 
@@ -36,10 +36,10 @@ public class ClassC {
 //		We are calling/using static variable from ClassA and ClassC is not a sub class for ClassA
 //		So we need to create object for ClassA
 //    	Although we are calling Static class var we can't directly call in non static method because ClassC is not a sub class for ClassA 
-		ClassA ist = new ClassA();
-		System.out.println(ist.aa);
-		System.out.println(ist.bb);
-//		System.out.println(ist.cc);
-		System.out.println(ist.dd);
+//		ClassA ist = new ClassA();
+		System.out.println(ClassA.aa);
+		System.out.println(ClassA.bb);
+//		System.out.println(ClassA.cc);
+		System.out.println(ClassA.dd);
 	}
 }
