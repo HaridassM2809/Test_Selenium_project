@@ -1,6 +1,6 @@
 package javaBasic;
 
-public class VariableValues {
+public class V0VariableValues {
 	static int b; // declare
 
 	static int c = 20; // declare + initialize;
@@ -12,7 +12,7 @@ public class VariableValues {
 	int test = 20;
 
 	public static void main(String[] args) {
-		VariableValues myObject = new VariableValues();
+		V0VariableValues myObject = new V0VariableValues();
 //		myObject.method1();
 //		myObject.
 		

@@ -1,10 +1,10 @@
 package javaBasic;
 
-public class VarAsParameter {
+public class V1VarAsParameter {
 
 	public static void main(String[] args) {
 
-		VarAsParameter ABC = new VarAsParameter();
+		V1VarAsParameter ABC = new V1VarAsParameter();
 		ABC.buyPen("Black", "Blue");
 		ABC.fancyStore("Hamam",10,"Unruled",10);
 
