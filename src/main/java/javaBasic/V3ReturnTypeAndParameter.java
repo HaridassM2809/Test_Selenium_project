@@ -6,6 +6,7 @@ public class V3ReturnTypeAndParameter {
 		V3ReturnTypeAndParameter obj = new V3ReturnTypeAndParameter();
 		System.out.println(obj.Method1(obj.Method2(null)));
 		
+//		Calling a non-static method into a static method and taking a parameter from another class non-static method
 		ClassAA obj2=new ClassAA();
 		obj.Method1(obj2.Method3());
 		
@@ -23,9 +24,14 @@ public class V3ReturnTypeAndParameter {
 	public char Method2(String d) {
 		return 'M';
 	}
-	
+	public ClassAA Method2A() {
+		return null;
+		
+	}
 }
 class ClassAA {
+	
+	int y = 10;
 
 	public char Method3() {
 		char c = 'M';
