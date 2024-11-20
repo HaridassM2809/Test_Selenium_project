@@ -3,7 +3,7 @@ package loop_if_And_for;
 public class ExIfLoop {
 	
 	int a =200;
-	String str ="HaRI";
+	String str ="HaRi";
 
 	public static void main(String[] args) {
 		
@@ -22,5 +22,7 @@ public class ExIfLoop {
 		else {
 			System.out.println("String was not matching");
 		}
+
 	}
 }
+
