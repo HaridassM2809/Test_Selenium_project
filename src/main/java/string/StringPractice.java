@@ -1,6 +1,6 @@
 package string;
 
-public class StringPratice {
+public class StringPractice {
 
 	String str = "Harish";
 	String str1 = "Haridass";
@@ -9,7 +9,7 @@ public class StringPratice {
 	String str4 = "Harish";
 
 	public static void main(String[] args) {
-		StringPratice obj = new StringPratice();
+		StringPractice obj = new StringPractice();
 		System.out.println("Print String lenght...");
 		obj.lenghtMethod();
 		System.out.println("Print String isempty or not method...");
