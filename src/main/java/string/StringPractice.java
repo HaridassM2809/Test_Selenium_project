@@ -51,7 +51,7 @@ public class StringPractice {
 	public void equalIsIgnoremethod() {
 		boolean a = str.equalsIgnoreCase(str1);
 		System.out.println(a);
-		System.out.println(str.equalsIgnoreCase(str4));
+		System.out.println(str.equalsIgnoreCase(str4));	
 	}
 
 	public void contentequalsMethod() {
