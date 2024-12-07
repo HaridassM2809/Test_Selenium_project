@@ -4,8 +4,9 @@ public class TestString {
 
 	public static void main(String[] args) {
 
-		//this loop will print the whole string in reserve
+		//this loop will print the whole string in reverse
 		String str = "I am Haridass";
+		
 		char[] strArr = str.toCharArray();
 		System.out.println(strArr.length);
 		String temp ="";
@@ -17,8 +18,9 @@ public class TestString {
 		System.out.println(temp);
 		
 		System.out.println("&&&&&&&&&&&&&&&&&&&&&&&");
-		
-		String[] strArr1 = str.split(" ");
+		//this loop will print eachword string in reverse
+		String str1 = "OOPS stands for object oriented program language";
+		String[] strArr1 = str1.split(" ");
 		String temp1="";
 		for(String eachword :strArr1) {
 //			System.out.println(temp1);
