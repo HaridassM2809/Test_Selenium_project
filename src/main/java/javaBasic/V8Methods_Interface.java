@@ -21,9 +21,9 @@ public interface V8Methods_Interface {
 	
 	}
    
-	private static void methodA5() {
-	
-	}
+//	private static void methodA5() {
+//	
+//	}
 
 //	static protected void methodA6() {
 //	
@@ -51,9 +51,9 @@ public interface V8Methods_Interface {
 //	public void method4() {
 //		
 //	}
-	private void method5() {
-		
-	}
+//	private void method5() {
+//		
+//	}
 //	protected void method6() {
 //		
 //	}
