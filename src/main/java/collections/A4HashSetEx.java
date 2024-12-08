@@ -57,7 +57,7 @@ Useful methods in Set Interface
 	 */
 
 
-public class HashSetEx {
+public class A4HashSetEx {
 
 	public static void main(String[] args) {
 		HashSet<Integer> hst = new HashSet<Integer>();
