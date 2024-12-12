@@ -77,4 +77,44 @@ public class Selenium_Basic {
 		System.out.println(driver.getTitle());
 
 	}
+	public void switchAWindowBasedOnTitle(String windowTitle) {
+		Set<String> allWindowHandle = driver.getWindowHandles();
+
+		for (String eachWindowHandle : allWindowHandle) {
+			driver.switchTo().window(eachWindowHandle);
+//			System.out.println(driver.getTitle());
+			if (driver.getTitle().contains(windowTitle)) {
+				break;
+			}
+		}
+	}
+
+	public void closeAllChildWindows(String parentWindowHandle) {
+		Set<String> allWindowHandle = driver.getWindowHandles();
+
+		for (String eachWindowHandle : allWindowHandle) {
+			if (!eachWindowHandle.equals(parentWindowHandle)) {
+				driver.switchTo().window(eachWindowHandle);
+				driver.close();
+			}
+		}
+		driver.switchTo().window(parentWindowHandle);
+	}
+
+	public void closeAllTheWindowsExceptGivenWindow(String windowTitle) {
+		Set<String> allWindowHandle = driver.getWindowHandles();
+
+		String bWindowHandle = null;
+		
+		for (String eachWindowHandle : allWindowHandle) {
+			driver.switchTo().window(eachWindowHandle);
+//			System.out.println(driver.getTitle());
+			if (driver.getTitle().contains(windowTitle)) {
+				bWindowHandle = driver.getWindowHandle();
+				continue;
+			} else
+				driver.close();
+		}
+		driver.switchTo().window(bWindowHandle);
+	}
 }
