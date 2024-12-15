@@ -29,7 +29,7 @@ public class Selenium_Basic {
 //		driver.quit();
 		System.out.println(System.getProperty("user.dir"));
 		System.getProperty("Webdriver.edge.driver", ".\\Driver\\msedgedriver.exe");
-		driver = new ChromeDriver();
+		driver = new EdgeDriver();
 		driver.manage().window().fullscreen();
 		driver.get("https://youtube.com/");
 		System.out.println(driver.getTitle());
