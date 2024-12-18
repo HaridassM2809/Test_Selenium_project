@@ -11,9 +11,9 @@ public class FindElement {
 		System.getProperty("Webdriver_edge_drive", ".\\\\Driver\\\\msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
 		driver.get("https://www.youtube.com/");
+		driver.manage().window().maximize();
 		WebElement element = driver.findElement(By.linkText("Shorts"));
 		element.click();
-
 		
 
 	}
