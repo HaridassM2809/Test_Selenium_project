@@ -54,25 +54,25 @@ public class Selenium_Basic {
 
 		Set<String> allWindowhdls = driver.getWindowHandles();
 		
-		System.out.println("############## Switch window based on title ##############");
-		for (String eachWindowHandle : allWindowhdls) {
-			driver.switchTo().window(eachWindowHandle);
-			System.out.println(driver.getTitle());
-			if (driver.getTitle().contains("XPath")) {
-				System.out.println(driver.getTitle());
-				break;
-			}
-		}
-
-		System.out.println(driver.getTitle());
+//		System.out.println("############## Switch window based on title ##############");
+//		for (String eachWindowHandle : allWindowhdls) {
+//			driver.switchTo().window(eachWindowHandle);
+//			System.out.println(driver.getTitle());
+//			if (driver.getTitle().contains("XPath")) {
+//				System.out.println(driver.getTitle());
+//				break;
+//			}
+//		}
+//
+//		System.out.println(driver.getTitle());
 
 		System.out.println("Switch window based on windowhandles");
 		for (String eachWindowHandle : allWindowhdls) {
-			if (eachWindowHandle.equalsIgnoreCase(ParentWindHndl)) {
+			if (!eachWindowHandle.equalsIgnoreCase(ParentWindHndl)){
 				driver.switchTo().window(eachWindowHandle);
 			}
 		}
-		driver.close();
+//		driver.close();
 //		driver.switchTo().window(ParentWindHndl);
 		System.out.println(driver.getTitle());
 

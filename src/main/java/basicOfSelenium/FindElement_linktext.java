@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class FindElement {
+public class FindElement_linktext {
 
 	public static void main(String[] args) {
 		System.getProperty("Webdriver_edge_drive", ".\\\\Driver\\\\msedgedriver.exe");

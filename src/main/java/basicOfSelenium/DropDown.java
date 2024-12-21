@@ -23,10 +23,12 @@ public class DropDown {
 		
 		dpd.selectByIndex(1);
 		Thread.sleep(2000);
-		dpd.selectByValue("IND");
+		dpd.selectByValue("IND"); //this will take from DOM option value
 		Thread.sleep(2000);
 		dpd.selectByContainsVisibleText("Barbuda");
+		dpd.selectByVisibleText("Australia"); //this will take from visible text
 		
+		System.out.println(driver.findElement(By.linkText("CHEATSHEETS")));
 	}
 
 }
