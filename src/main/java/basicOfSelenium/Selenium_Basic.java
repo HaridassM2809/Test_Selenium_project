@@ -53,7 +53,7 @@ public class Selenium_Basic {
 		String ParentWindHndl = driver.getWindowHandle();
 
 		Set<String> allWindowhdls = driver.getWindowHandles();
-		
+
 //		System.out.println("############## Switch window based on title ##############");
 //		for (String eachWindowHandle : allWindowhdls) {
 //			driver.switchTo().window(eachWindowHandle);
@@ -68,7 +68,7 @@ public class Selenium_Basic {
 
 		System.out.println("Switch window based on windowhandles");
 		for (String eachWindowHandle : allWindowhdls) {
-			if (!eachWindowHandle.equalsIgnoreCase(ParentWindHndl)){
+			if (!eachWindowHandle.equalsIgnoreCase(ParentWindHndl)) {
 				driver.switchTo().window(eachWindowHandle);
 			}
 		}
@@ -77,6 +77,7 @@ public class Selenium_Basic {
 		System.out.println(driver.getTitle());
 
 	}
+
 	public void switchAWindowBasedOnTitle(String windowTitle) {
 		Set<String> allWindowHandle = driver.getWindowHandles();
 
@@ -105,7 +106,7 @@ public class Selenium_Basic {
 		Set<String> allWindowHandle = driver.getWindowHandles();
 
 		String bWindowHandle = null;
-		
+
 		for (String eachWindowHandle : allWindowHandle) {
 			driver.switchTo().window(eachWindowHandle);
 //			System.out.println(driver.getTitle());

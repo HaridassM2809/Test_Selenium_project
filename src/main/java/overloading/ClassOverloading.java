@@ -19,7 +19,6 @@ package overloading;
 //	* public int indexOf(int ch) { }
 //	* public int indexOf(int ch, int fromIndex) { }
 
-
 //Selenium Example:
 //	* WebDriver frame(int index);
 //	* WebDriver frame(String nameOrId);
@@ -47,7 +46,7 @@ public class ClassOverloading {
 		System.out.println("Non-static method2 in ClassOverloading");
 		return 0;
 	}
-	
+
 	public void method2(String str) {
 		System.out.println("Non-static method2 with string parameter in ClassOverloading");
 	}
@@ -58,7 +57,7 @@ public class ClassOverloading {
 		obj.method1(0);
 		obj.method2();
 		obj.method2("Hari");
-		
+
 	}
 
 }

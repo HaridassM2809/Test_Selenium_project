@@ -25,33 +25,35 @@ public class CallingMethod {
 // 	When you are going to call a 
 //		* Non-static - Object Creation
 //		* static - direct(within a class) or along with class name (outside of class)
-	
-	
-    public void methodA() {
-    	System.out.println("this a new");
-    	methodB();  				//from Non-static method calling another non-static method
 
-    	//    	or
-    	CallingMethod obj = new CallingMethod ();
-    	obj.methodB();
-    	
+	public void methodA() {
+		System.out.println("this a new");
+		methodB(); // from Non-static method calling another non-static method
+
+		// or
+		CallingMethod obj = new CallingMethod();
+		obj.methodB();
+
 //    	&&&&&&
-    	methodD(); 					//from Non-static method calling another static method
-    	
-    }
-    public void methodB() {
-    
-    }
-    static public void methodC() {
+		methodD(); // from Non-static method calling another static method
+
+	}
+
+	public void methodB() {
+
+	}
+
+	static public void methodC() {
 //    	ClassName objectName = new ClassName ();  - object creation syntax
-    	CallingMethod obj = new CallingMethod ();  //from static method calling another non-static method
-    	obj.methodB();	
-    	
+		CallingMethod obj = new CallingMethod(); // from static method calling another non-static method
+		obj.methodB();
+
 //    	&&&&&&
-    	methodD(); 					//from static method calling another static method 	
-    	
-    }
-    public static void methodD() {
-    	
-    }
+		methodD(); // from static method calling another static method
+
+	}
+
+	public static void methodD() {
+
+	}
 }

@@ -17,24 +17,23 @@ public class ScreenShotPractice {
 
 	public static void main(String[] args) throws IOException {
 
-		System.setProperty("Webdriver.chrome.driver",".\\Driver\\chromedriver.exe");
+		System.setProperty("Webdriver.chrome.driver", ".\\Driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://practice.expandtesting.com/dropdown");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
-		TakesScreenshot screenshot = (TakesScreenshot)driver;
+
+		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File ssimg = screenshot.getScreenshotAs(OutputType.FILE);
-		
+
 		LocalDateTime timeAndDate = LocalDateTime.now();
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss");
 		String datetime = formatter.format(timeAndDate);
 		System.out.println(datetime);
-		
-		File imglocation = new File(".\\src\\test\\resources\\Screenshot\\"+datetime+".jpeg");
+
+		File imglocation = new File(".\\src\\test\\resources\\Screenshot\\" + datetime + ".jpeg");
 		FileHandler.copy(ssimg, imglocation);
-		
-		
+
 	}
 
 }

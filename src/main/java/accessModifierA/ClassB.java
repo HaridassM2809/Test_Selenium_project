@@ -1,9 +1,8 @@
 package accessModifierA;
 
-public class ClassB extends ClassA{
+public class ClassB extends ClassA {
 	public void method3() {
-		
-		
+
 //		We are calling/using non static variable from ClassA
 //		So we need to create object for ClassA
 		ClassA obj = new ClassA();
@@ -19,16 +18,17 @@ public class ClassB extends ClassA{
 		System.out.println(b);
 //		System.out.println(c);
 		System.out.println(d);
-		
+
 //		Since ClassB follows ClassA, 
 //		ClassB can use variables/methods of ClassA directly except Private variable
 //		No need to create object
 		System.out.println(aa);
 		System.out.println(bb);
 //		System.out.println(cc);
-		System.out.println(dd);		
-	
+		System.out.println(dd);
+
 	}
+
 	public static void method4() {
 
 //		We are calling/using non static variable from ClassA, 
@@ -45,7 +45,7 @@ public class ClassB extends ClassA{
 		System.out.println(aa);
 		System.out.println(bb);
 //		System.out.println(cc);
-		System.out.println(dd);	
+		System.out.println(dd);
 
 	}
 

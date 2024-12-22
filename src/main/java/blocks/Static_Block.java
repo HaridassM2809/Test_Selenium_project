@@ -11,7 +11,7 @@ public class Static_Block {
 
 		Static_Block obj = new Static_Block();
 		obj.buyBike();
-		System.out.println(obj.str1); //printed class level var
+		System.out.println(obj.str1); // printed class level var
 
 	}
 
@@ -27,7 +27,7 @@ public class Static_Block {
 		System.out.println("I'm non-static buybike method");
 		String str = "Hari";
 		System.out.println(str.toUpperCase());
-		str1=str; //assigned local var value to class var
+		str1 = str; // assigned local var value to class var
 	}
 
 }

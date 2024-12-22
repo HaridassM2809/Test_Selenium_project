@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ScrollingExample {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("Webdriver.chrome.driver",".\\Driver\\chromedriver.exe");
+		System.setProperty("Webdriver.chrome.driver", ".\\Driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://practice.expandtesting.com/dropdown");
@@ -19,10 +19,9 @@ public class ScrollingExample {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 //		jse.executeScript("window.scrollBy(0,1500)");
 		Thread.sleep(Duration.ofSeconds(10));
-		
+
 		WebElement element = driver.findElement(By.xpath("//h4[contains (text(), 'Web UI and Rest API')]"));
 		jse.executeScript("arguments[0].scrollIntoView();", element);
 	}
 
 }
-

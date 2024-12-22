@@ -78,17 +78,12 @@ public class IfPractice {
 		} else
 			System.out.println(a + " is neither divisible by 2 or 3");
 
-		
-		
 		// verify a number is divisible by both 2 and 3
 		if (a % 2 == 0 && a % 3 == 0) {
 			System.out.println(a + " is divisible by 2 and 3");
 		}
 
-		
-
 		// NESTED IF AND IF ELSE
-		
 
 		if (a % 2 == 0) {
 			System.out.println(a + " is divisible by 2");
@@ -110,20 +105,19 @@ public class IfPractice {
 		if (method1() % 2 == 0) {
 			System.out.println("***");
 		}
-		
-		if(a % 2 == 0) {
+
+		if (a % 2 == 0) {
 			int k = a % 2;
 			System.out.println("its odd");
 		}
-		
-		
-		if(method2()) { 
-			
+
+		if (method2()) {
+
 		}
-		
+
 		boolean abc = true;
-		if(abc) {
-			
+		if (abc) {
+
 		}
 
 	}
@@ -132,7 +126,7 @@ public class IfPractice {
 		int a = 10;
 		return a;
 	}
-	
+
 	public static boolean method2() {
 		return true;
 	}

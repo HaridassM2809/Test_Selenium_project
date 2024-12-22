@@ -9,11 +9,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitPractice {
-	
+
 	static WebDriver driver;
 
 	public static void main(String[] args) {
-		System.setProperty("Webdriver.edge.driver",".\\Driver\\msedgedriver.exe");
+		System.setProperty("Webdriver.edge.driver", ".\\Driver\\msedgedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.hyrtutorials.com/p/waits-demo.html");
@@ -21,11 +21,12 @@ public class WaitPractice {
 		driver.findElement(By.id("btn1")).click();
 		driver.findElement(By.id("txt1")).sendKeys("Hari");
 		driver.findElement(By.id("btn2")).click();
-		//this textbox will appear after 10 seconds only but in implicitly waits we given 7 secs so we need to give explicitly wait
+		// this textbox will appear after 10 seconds only but in implicitly waits we
+		// given 7 secs so we need to give explicitly wait
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txt2")));
-		driver.findElement(By.id("txt2")).sendKeys("Dass"); 
-		
+		driver.findElement(By.id("txt2")).sendKeys("Dass");
+
 	}
 
 	public void waitForAlertToBePresent(long seconds) {

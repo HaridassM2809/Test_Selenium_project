@@ -1,7 +1,7 @@
 package switchCase;
 
 public class TestSwitchCase {
-	
+
 //switch(intCondition) {
 //case 1:
 //content
@@ -22,18 +22,19 @@ public class TestSwitchCase {
 		obj.yamahaBike("FZ_version2");
 
 	}
+
 	public void yamahaBike(String bikeversion) {
-		switch(bikeversion){
-		case("FZ_version2"):
+		switch (bikeversion) {
+		case ("FZ_version2"):
 			System.out.println("Yamaha FZ version 2");
-		case("FZ_version3"):
+		case ("FZ_version3"):
 			System.out.println("Yamaha FZ version 3");
-		case("FZ_version4"):
+		case ("FZ_version4"):
 			System.out.println("Yamaha FZ version 4");
 		default:
 			System.out.println("Yamaha RX 100");
 		}
-			
+
 	}
 
 }

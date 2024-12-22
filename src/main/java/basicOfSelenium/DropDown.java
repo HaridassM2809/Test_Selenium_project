@@ -9,8 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class DropDown {
-	
-	static WebDriver driver; 
+
+	static WebDriver driver;
+
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("Webdriver.chrome.edge", ".\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -20,14 +21,14 @@ public class DropDown {
 		WebElement country_dropdown = driver.findElement(By.xpath("//div[@rel-title='Select Country']/p/select"));
 		Select dpd = new Select(country_dropdown);
 		System.out.println(dpd.isMultiple());
-		
+
 		dpd.selectByIndex(1);
 		Thread.sleep(2000);
-		dpd.selectByValue("IND"); //this will take from DOM option value
+		dpd.selectByValue("IND"); // this will take from DOM option value
 		Thread.sleep(2000);
 		dpd.selectByContainsVisibleText("Barbuda");
-		dpd.selectByVisibleText("Australia"); //this will take from visible text
-		
+		dpd.selectByVisibleText("Australia"); // this will take from visible text
+
 		System.out.println(driver.findElement(By.linkText("CHEATSHEETS")));
 	}
 

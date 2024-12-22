@@ -19,13 +19,14 @@ public class GettingArrayInputFromUser {
 
 		int i;
 		for (i = 0; i < arrayLength; i++) {
-			arr[i] = scan.nextInt();  // this loop will get input from user
-			}
-		for(i=0;i<arrayLength;i++) {
-			System.out.println("Show arr ["+i+"] index value of: "+arr[i]); // this loop will show the array index values
+			arr[i] = scan.nextInt(); // this loop will get input from user
+		}
+		for (i = 0; i < arrayLength; i++) {
+			System.out.println("Show arr [" + i + "] index value of: " + arr[i]); // this loop will show the array index
+																					// values
 		}
 //		System.out.println(arr[i]);
 
 	}
-	
+
 }

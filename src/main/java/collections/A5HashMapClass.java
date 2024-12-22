@@ -26,7 +26,7 @@ public class A5HashMapClass {
 //	 * forEach(), replaceAll() and clone() methods are overridden in HashMap 
 //	 In Maps, we cannot use forEach() method on either keys or values. 
 //	 We can only use for keys and values pair.
-	
+
 //	HashMap<String, Integer> map = new HashMap<String, Integer>();
 //
 //	map.put("A", 1);
@@ -58,7 +58,6 @@ public class A5HashMapClass {
 //	2) collection of values
 //	3) set of key value pair
 
-
 	/**
 	 * @param args
 	 */
@@ -78,55 +77,53 @@ public class A5HashMapClass {
 		Map<String, Integer> marks10 = new HashMap<String, Integer>();
 		marks10.putAll(marks);
 		System.out.println(marks10);
-		
+
 		System.out.println("******* Iterating key and values using foreach loop*****");
 		Set<String> keys = marks.keySet();
-		for(String each: keys) {
+		for (String each : keys) {
 			System.out.println(each);
 		}
-		
+
 		Collection<Integer> values = marks.values();
-		for(Integer each: values) {
+		for (Integer each : values) {
 			System.out.println(each);
 		}
-		
+
 		System.out.println("iterator");
-		Set<Entry<String, Integer>>  entrySet = marks.entrySet();
+		Set<Entry<String, Integer>> entrySet = marks.entrySet();
 //		entrySet.get();
-		Iterator<Entry<String, Integer>>  iterator = entrySet.iterator();
-		while(iterator.hasNext()) {
+		Iterator<Entry<String, Integer>> iterator = entrySet.iterator();
+		while (iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
-		
-		System.out.println("*****Iterator usign Map.Entry");
-		Set<Map.Entry<String, Integer>>  entrySet1 = marks.entrySet();
-		Iterator<Map.Entry<String, Integer>>  iterator1 = entrySet.iterator();
 
-		
-		while(iterator1.hasNext()) {
+		System.out.println("*****Iterator usign Map.Entry");
+		Set<Map.Entry<String, Integer>> entrySet1 = marks.entrySet();
+		Iterator<Map.Entry<String, Integer>> iterator1 = entrySet.iterator();
+
+		while (iterator1.hasNext()) {
 			Entry<String, Integer> entry = iterator1.next();
 //			System.out.println(entry.getKey());
 //			System.out.println(entry.getValue());
 //			if(null.getKey())
-			
-			if(entry.getKey() == null) {
+
+			if (entry.getKey() == null) {
 //				System.out.println(entry.getValue());
 				continue;
 			}
-		
+
 //			String key = entry.getKey();
 //			if(key != null && key.equals("English")) {
-			if(entry.getKey() != null && entry.getKey().equals("English")) {
+			if (entry.getKey() != null && entry.getKey().equals("English")) {
 				System.out.println(entry.getValue());
 			}
 		}
-		
-		
+
 //		for (Map.Entry<String, Integer> entry1 : marks10.entrySet()) {
 //			System.out.println(entry1.getKey());
 //			System.out.println(entry1.getValue());
 //		}	
-		
+
 //		HashMapClass obj = new HashMapClass();
 //		obj.mapPractice();
 
@@ -166,11 +163,10 @@ public class A5HashMapClass {
 		for (Integer eachvalue : value) {
 			System.out.println(eachvalue);
 		}
-		
-		
+
 //		Set<Map.Entry <String, Integer>>  keyValues = marks.entrySet();
 //		keyValues.
-		
+
 //		Set <Integer> value1 = (Set<Integer>) marks.values();
 //		for(Integer eachvalue :value1) {
 //			System.out.println(eachvalue);
@@ -221,8 +217,8 @@ public class A5HashMapClass {
 		}
 
 		System.out.println("********entrySet() method ******");
-		Set<Entry<String, Integer>>  entrySet = marks.entrySet();
-		Iterator<Entry<String, Integer>>  iterateEntrySet = entrySet.iterator();
+		Set<Entry<String, Integer>> entrySet = marks.entrySet();
+		Iterator<Entry<String, Integer>> iterateEntrySet = entrySet.iterator();
 		while (iterateEntrySet.hasNext()) {
 			System.out.println(iterateEntrySet.next());
 		}
@@ -268,8 +264,6 @@ public class A5HashMapClass {
 			System.out.println("Map contains value 75");
 		} else
 			System.out.println("Map does not contain value 75");
-		
-		
 
 		System.out.println("********* Iterating keys alone using foreach loop ********");
 		for (String eachKey : marks.keySet()) {
@@ -288,10 +282,9 @@ public class A5HashMapClass {
 			System.out.println(entry1.getKey());
 			System.out.println(entry1.getValue());
 		}
-		
+
 		System.out.println("********* foreach() method ***");
 		marks.forEach((a, b) -> System.out.println(a + ":" + b));
 
 	}
 }
-

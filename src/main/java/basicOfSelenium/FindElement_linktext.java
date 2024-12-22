@@ -14,7 +14,6 @@ public class FindElement_linktext {
 		driver.manage().window().maximize();
 		WebElement element = driver.findElement(By.linkText("Shorts"));
 		element.click();
-		
 
 	}
 

@@ -13,18 +13,18 @@ public class ClassA {
 	static protected int dd = 40;
 
 	public void method1() {
-		
+
 //Non-static class var we can directly call in non static method
 		System.out.println(a);
 		System.out.println(b);
 		System.out.println(c);
 		System.out.println(d);
-		
+
 //Static class var we can directly call in non static method		
 		System.out.println(aa);
 		System.out.println(bb);
 		System.out.println(cc);
-		System.out.println(dd);		
+		System.out.println(dd);
 
 	}
 
@@ -41,9 +41,8 @@ public class ClassA {
 		System.out.println(aa);
 		System.out.println(bb);
 		System.out.println(cc);
-		System.out.println(dd);	
+		System.out.println(dd);
 
 	}
 
 }
-

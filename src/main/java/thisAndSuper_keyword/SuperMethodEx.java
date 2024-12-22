@@ -1,6 +1,6 @@
 package thisAndSuper_keyword;
 
-public class SuperMethodEx extends ParentSuperMethod{
+public class SuperMethodEx extends ParentSuperMethod {
 
 	public SuperMethodEx() {
 		super();
@@ -11,7 +11,7 @@ public class SuperMethodEx extends ParentSuperMethod{
 		super(a);
 		System.out.println("I am child class int parameterized constructor");
 	}
-	
+
 	public SuperMethodEx(char ab) {
 //		super();  //this super() was implicit(hidden) in constructor
 		System.out.println("I am child class char parameterized constructor");
@@ -21,11 +21,11 @@ public class SuperMethodEx extends ParentSuperMethod{
 		SuperMethodEx obj = new SuperMethodEx();
 		obj.method1();
 		System.out.println("&&&&&&&&&&&&&&&&&&&&&&");
-		
+
 		SuperMethodEx obj1 = new SuperMethodEx(10);
 		obj1.method1();
 		System.out.println("&&&&&&&&&&&&&&&&&&&&&&");
-		
+
 		SuperMethodEx obj2 = new SuperMethodEx('R');
 		obj2.method1();
 	}

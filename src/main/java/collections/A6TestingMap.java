@@ -21,46 +21,43 @@ public class A6TestingMap {
 		marks.put("Maths", 95);
 
 		System.out.println(marks);
-		
+
 //		if you want to check the any specific key is present in the keys
 //		1) you need to all the keys
-		Set<String> allKeys = marks.keySet(); //Set of keys
-		for(String eachKey: allKeys) {
+		Set<String> allKeys = marks.keySet(); // Set of keys
+		for (String eachKey : allKeys) {
 			System.out.println(eachKey);
 		}
-		
+
 //		Similarly you can check for Values as well
-		Collection<Integer> allValues = marks.values(); //Collection of values
-		for(Integer eachVal : allValues) {
+		Collection<Integer> allValues = marks.values(); // Collection of values
+		for (Integer eachVal : allValues) {
 			System.out.println(eachVal);
 		}
-		
-		Set<Entry<String, Integer>> allKeyAndValue =  marks.entrySet(); //key - value mapping;
+
+		Set<Entry<String, Integer>> allKeyAndValue = marks.entrySet(); // key - value mapping;
 		System.out.println(allKeyAndValue);
-		for(Entry<String, Integer> each: allKeyAndValue) {
+		for (Entry<String, Integer> each : allKeyAndValue) {
 //			System.out.println(each.getKey());
 //			System.out.println(each.getValue());
-			
-			if(each.getKey() != null &&  each.getKey().equals("English")) {
+
+			if (each.getKey() != null && each.getKey().equals("English")) {
 				System.out.println(each.getValue());
 			}
 		}
-		
-		
+
 		System.out.println("Using Iterator to go through the key value pair simultaniously");
-		
+
 		Iterator<Entry<String, Integer>> ite = allKeyAndValue.iterator();
-		
-		while(ite.hasNext()) {
+
+		while (ite.hasNext()) {
 			System.out.println(ite.next());
-			
+
 			Entry<String, Integer> eachEntry = ite.next();
 			if (eachEntry.getKey() != null && eachEntry.getKey().equalsIgnoreCase("English")) {
 				System.out.println(eachEntry.getValue());
 			}
 		}
-		
-		
 
 	}
 

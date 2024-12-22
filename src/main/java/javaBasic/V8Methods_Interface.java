@@ -6,21 +6,22 @@ public interface V8Methods_Interface {
 //	* only body less methods
 //	* only body methods  (static or default)
 //	* both body less and body method
-	
-	public void method1(); //body less public method
-	
-	void method2(int a); //In Default method without default access modifier mention we can't create body method
-	
-	default int method3(String str) { //default string parameterized method with int return type
+
+	public void method1(); // body less public method
+
+	void method2(int a); // In Default method without default access modifier mention we can't create
+							// body method
+
+	default int method3(String str) { // default string parameterized method with int return type
 		return 0;
 	}
-	
+
 //	*************************************
 //  Static method with body and with different access modifier
 	public static void methodA4() {
-	
+
 	}
-   
+
 //	private static void methodA5() {
 //	
 //	}
@@ -30,9 +31,9 @@ public interface V8Methods_Interface {
 //	}
 
 	static void methodA7() {
-	
+
 	}
-	
+
 //  Static method without body and with different access modifier
 
 //	public static void methodA14();
@@ -46,7 +47,6 @@ public interface V8Methods_Interface {
 //**********************************************
 
 //  non static method with body and body less method
-
 
 //	public void method4() {
 //		
@@ -62,11 +62,11 @@ public interface V8Methods_Interface {
 //	}
 //******************************
 	public void method14();
-	
+
 //	private void method15();
-	
+
 //	protected void method16();
-	
+
 	void method17();
-	
+
 }

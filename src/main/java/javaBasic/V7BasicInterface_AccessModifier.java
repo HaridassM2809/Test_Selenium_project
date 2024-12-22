@@ -13,10 +13,10 @@ public interface V7BasicInterface_AccessModifier {
 //	protected interface sample3 {
 //
 //	}
-	
-	interface sample4{
-		
-	}	
+
+	interface sample4 {
+
+	}
 }
 //outside interface but same file we can't create public, private and protected access modifier interface. we can only default.
 

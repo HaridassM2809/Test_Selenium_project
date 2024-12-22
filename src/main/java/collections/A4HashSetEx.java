@@ -56,7 +56,6 @@ Useful methods in Set Interface
 	* So in order to do various operations on Set, we need to convert them into List
 	 */
 
-
 public class A4HashSetEx {
 
 	public static void main(String[] args) {
@@ -69,12 +68,12 @@ public class A4HashSetEx {
 		hst.add(10);
 		hst.add(0);
 		System.out.println(hst);
-		
+
 		System.out.println("&&&this contain method will check the value present or not in the set&&&");
 		System.out.println(hst.contains(null));
 		System.out.println(hst.contains(20));
 		System.out.println(hst.contains(22));
-		
+
 		HashSet<String> hsts = new HashSet<String>();
 		hsts.add("Hari");
 		hsts.add("100");
@@ -84,7 +83,7 @@ public class A4HashSetEx {
 		System.out.println(hst.equals(hst));
 		System.out.println(hsts.remove(null));
 		System.out.println(hsts);
-		
+
 	}
 
 }

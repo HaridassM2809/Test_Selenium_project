@@ -3,16 +3,16 @@ package accessModifierA;
 public class ClassC {
 
 	public void method5() {
-		
+
 //		We are calling/using non static variable from ClassA
 //		So we need to create object for ClassA
-		
+
 		ClassA obj = new ClassA();
 		System.out.println(obj.a);
 		System.out.println(obj.b);
 //    	System.out.println(obj.c);
 		System.out.println(obj.d);
-		
+
 //		We are calling/using static variable from ClassA and ClassC is not a sub class for ClassA
 //		So we need to create object for ClassA
 //    	Although we are calling Static class var we can't directly call in non static method because ClassC is not a sub class for ClassA 
@@ -20,19 +20,20 @@ public class ClassC {
 		System.out.println(ClassA.aa);
 		System.out.println(ClassA.bb);
 //		System.out.println(ClassA.cc);
-		System.out.println(ClassA.dd);	
+		System.out.println(ClassA.dd);
 	}
+
 	static public void method6() {
 
 //		We are calling/using non static variable from ClassA
 //		So we need to create object for ClassA
-		
+
 		ClassA obj = new ClassA();
 		System.out.println(obj.a);
 		System.out.println(obj.b);
 //   	System.out.println(obj.c);
 		System.out.println(obj.d);
-		
+
 //		We are calling/using static variable from ClassA and ClassC is not a sub class for ClassA
 //		So we need to create object for ClassA
 //    	Although we are calling Static class var we can't directly call in non static method because ClassC is not a sub class for ClassA 

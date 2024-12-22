@@ -30,17 +30,16 @@ package overriding;
 public class ClassOverriding extends ParentClassOverriding {
 
 	public static void main(String[] args) {
-		
+
 //		Normal object creation for Child class and a reference as Child class
 //		Created object for child class, available all non-static method present both parent & child class through this object creation
-		ClassOverriding obj = new ClassOverriding(); 
+		ClassOverriding obj = new ClassOverriding();
 		obj.buyBike();
 		obj.buyDress();
 		obj.buyPen();
 		obj.buySoap();
 		System.out.println("&&&&&&&&&&&&&&&&&&&&&&&");
-		
-		
+
 //		Normal object creation for parent class and a reference as Parent class
 //		Created object for parent class, available all non-static method present parent class through this object creation
 		ParentClassOverriding obj1 = new ParentClassOverriding();
@@ -48,8 +47,7 @@ public class ClassOverriding extends ParentClassOverriding {
 		obj1.buyDress();
 		obj1.buySoap();
 		System.out.println("&&&&&&&&&&&&&&&&&&&&&&&");
-		
-		
+
 //	    object creation for Child class and a reference as parent class
 //		Created object for child class, available all non-static method present parent class only through this object creation
 		System.out.println("Overriding concept");
@@ -58,31 +56,35 @@ public class ClassOverriding extends ParentClassOverriding {
 		obj2.buyBike();
 		obj2.buyDress();
 		obj2.buySoap();
-		
 
 	}
+
 	public void buyBike() {
 		System.out.println("Buy bike method in ClassOverriding");
 	}
+
 	public void buySoap() {
 		System.out.println("Buy soap method in ClassOverriding");
 	}
+
 	public void buyPen() {
 		System.out.println("Buy pen method in ClassOverriding");
 	}
 
 }
 
-class ParentClassOverriding{
-	
+class ParentClassOverriding {
+
 	public void buyBike() {
 		System.out.println("Buy bike method in ParentClassOverriding");
 	}
+
 	public void buySoap() {
 		System.out.println("Buy soap method in ParentClassOverriding");
 	}
+
 	public void buyDress() {
 		System.out.println("Buy dress method in ParentClassOverriding");
 	}
-	
+
 }

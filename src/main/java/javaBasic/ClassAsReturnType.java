@@ -7,30 +7,31 @@ public class ClassAsReturnType {
 
 		ExClass abc = new ExClass();
 		System.out.println(abc.b);
-		
+
 		ClassAsReturnType obj1 = new ClassAsReturnType();
 		System.out.println(obj1.menthodAA().a);
-		
-		
+
 	}
+
 	public ExClass menthodAA() {
 
-	ExClass obj = new ExClass();
-	return obj;
+		ExClass obj = new ExClass();
+		return obj;
 //		System.out.println();
 	}
-	
+
 }
 
-class ExClass{
-	
+class ExClass {
+
 	int a = 10;
 	char b = 'H';
+
 	public void method1() {
 		System.out.println("I'm a Non-static method1");
 	}
+
 	static public void method2() {
 		System.out.println("I'm a static method1");
 	}
 }
-

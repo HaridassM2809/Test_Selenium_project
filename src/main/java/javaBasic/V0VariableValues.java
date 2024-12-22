@@ -6,33 +6,33 @@ public class V0VariableValues {
 	static int c = 20; // declare + initialize;
 
 	static int x = 100;
-	
+
 	int yy = 20;
-	
+
 	int test = 20;
 
 	public static void main(String[] args) {
 		V0VariableValues myObject = new V0VariableValues();
 //		myObject.method1();
 //		myObject.
-		
+
 //		In this method, I want to use variable "dummy's" value from method2() 
-		
+
 //		System.out.println(dummy);
 
 //		Two ways to bring out the local variable value, outside of that method
 //		return type concept  - later 
 //		By assigning local variable value to class level static or non static variables
-		
-		System.out.println(myObject.test); 
-		
-		myObject.method2(); //calling function/method
-		
-		System.out.println(myObject.test); 
-		
+
+		System.out.println(myObject.test);
+
+		myObject.method2(); // calling function/method
+
+		System.out.println(myObject.test);
+
 	}
-	
-	public void method2() { //called function/method
+
+	public void method2() { // called function/method
 		int dummy = 1000;
 		test = dummy;
 	}

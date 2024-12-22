@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Shadow_DOM {
-	
+
 //	WebPage to refer for CSS: https://www.geeksforgeeks.org/selenium-css-selectors/
-	
+
 //	Shadow root elements
 //
 //	* If an element is present inside the shadow root, we can not locate it in DOM using xPath or CSS.
@@ -25,8 +25,8 @@ public class Shadow_DOM {
 		driver.manage().window().maximize();
 		SearchContext shadowDom = driver.findElement(By.id("shadow-host")).getShadowRoot();
 //		shadowDom.findElement(By.xpath("//button [contains (text(), 'inside a Shadow')]")); //inside shadowroot  xpath/id/class won't work
-		shadowDom.findElement(By.cssSelector("button[type ='button']"));	
-		
+		shadowDom.findElement(By.cssSelector("button[type ='button']"));
+
 	}
 
 }

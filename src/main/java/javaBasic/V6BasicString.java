@@ -2,33 +2,34 @@ package javaBasic;
 
 public class V6BasicString {
 
-	static String a ="10"; //declaration and initialization
-	String b = "Hi"; //declaration and initialization
-	static String c; //declaration
-	String d; //declaration
-	V6BasicString e; //declaration
-	
+	static String a = "10"; // declaration and initialization
+	String b = "Hi"; // declaration and initialization
+	static String c; // declaration
+	String d; // declaration
+	V6BasicString e; // declaration
+
 	public static void main(String[] args) {
-		V6BasicString obj = new V6BasicString ();
-		
-		obj.e = new V6BasicString(); //initialization
+		V6BasicString obj = new V6BasicString();
+
+		obj.e = new V6BasicString(); // initialization
 		System.out.println(a);
 		System.out.println(obj.b);
-		
-		String f = "Hello"+ " World"; //initialized and declared local variable 
-		obj.b =f; //Assigned local var value to class variable
+
+		String f = "Hello" + " World"; // initialized and declared local variable
+		obj.b = f; // Assigned local var value to class variable
 		System.out.println(obj.b);
-		
+
 		String g = " Hello, Welcome to this new World! 'Thanks'..., @#\"EOM\"";
-		c=g;
+		c = g;
 		System.out.println(c);
 
-		String str1 = "* if my String is "+"Sathya"+", length - 6, index starts with 0. Then last index is 5 or I can say length -1;";
+		String str1 = "* if my String is " + "Sathya"
+				+ ", length - 6, index starts with 0. Then last index is 5 or I can say length -1;";
 		String str3 = "* if my String is \"Sathya\", length - 6, index starts with 0. Then last index is 5 or I can say length -1;";
 		System.out.println(str1);
 		System.out.println(str3);
-	}	
-}  
+	}
+}
 //	  Immutable concept 
 //	  It happens with String literals
 //	 
