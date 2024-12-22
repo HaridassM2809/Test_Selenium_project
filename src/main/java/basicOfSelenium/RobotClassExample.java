@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class RobotClassExample {
 	static WebDriver driver;
@@ -44,6 +45,8 @@ public class RobotClassExample {
 
 		robo.keyPress(KeyEvent.VK_ENTER);
 		robo.keyRelease(KeyEvent.VK_ENTER);
+		
+		
 	}
 
 	public static void fbLoginWithRobotClass() throws AWTException {
@@ -75,8 +78,7 @@ public class RobotClassExample {
 		robo.keyRelease(KeyEvent.VK_4);
 		robo.keyPress(KeyEvent.VK_8);
 		robo.keyRelease(KeyEvent.VK_8);
-		robo.keyRelease(KeyEvent.VK_SHIFT);
-		
+		robo.keyRelease(KeyEvent.VK_SHIFT);		
 	}
 
 }
