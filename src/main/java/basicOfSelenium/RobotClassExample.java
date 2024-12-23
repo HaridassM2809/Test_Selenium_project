@@ -9,9 +9,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
 
 public class RobotClassExample {
 	static WebDriver driver;
@@ -25,16 +23,16 @@ public class RobotClassExample {
 		driver.get("https://demo.guru99.com/test/upload/");
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		Robot robo = new Robot();
 
 		StringSelection stringSelection = new StringSelection("C:\\Users\\Admin\\Desktop\\Abc.txt");
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 
-		WebElement locator = driver.findElement(By.id("uploadfile_0"));
-		locator.click();
-//		driver.findElement(By.xpath("//div[@id='file_wraper0']//input[@type='file']")).click();
+		driver.findElement(By.id("file_wraper0")).click();
 		Thread.sleep(3000);
 
-		Robot robo = new Robot();
+//		Robot robo = new Robot();
 
 		robo.keyPress(KeyEvent.VK_CONTROL);
 		robo.keyPress(KeyEvent.VK_V);
@@ -45,6 +43,10 @@ public class RobotClassExample {
 
 		robo.keyPress(KeyEvent.VK_ENTER);
 		robo.keyRelease(KeyEvent.VK_ENTER);
+		
+		
+		driver.findElement(By.id("submitbutton")).click();
+		
 
 	}
 

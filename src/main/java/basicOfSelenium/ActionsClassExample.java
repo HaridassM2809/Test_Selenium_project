@@ -33,7 +33,6 @@ public class ActionsClassExample {
 
 //		main1(args);
 	}
-
 	public static void main1(String[] args) {
 		System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe");
 		driver = new ChromeDriver();
