@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="2" failed="1" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-23T11:27:19 IST" name="Default suite" finished-at="2024-12-23T11:27:28 IST" duration-ms="9359">
+  <suite started-at="2024-12-27T11:10:11 IST" name="Default suite" finished-at="2024-12-27T11:10:21 IST" duration-ms="9878">
     <groups>
+      <group name="groupB">
+        <method signature="DependsOnGroup.faceBooksite()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf]" name="faceBooksite" class="testNG_AnnotationsAndAttributes.DependsOnGroup"/>
+      </group> <!-- groupB -->
+      <group name="groupA">
+        <method signature="DependsOnGroup.group1()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf]" name="group1" class="testNG_AnnotationsAndAttributes.DependsOnGroup"/>
+      </group> <!-- groupA -->
     </groups>
-    <test started-at="2024-12-23T11:27:19 IST" name="Default test" finished-at="2024-12-23T11:27:28 IST" duration-ms="9359">
-      <class name="basicOfSelenium.BasicTestNgValidation">
-        <test-method signature="textValidation()[pri:0, instance:basicOfSelenium.BasicTestNgValidation@fbd1f6]" started-at="2024-12-23T11:27:19 IST" name="textValidation" finished-at="2024-12-23T11:27:24 IST" duration-ms="5195" status="FAIL">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2024-12-27T11:10:11 IST" name="Default test" finished-at="2024-12-27T11:10:21 IST" duration-ms="9878">
+      <class name="testNG_AnnotationsAndAttributes.DependsOnGroup">
+        <test-method signature="faceBooksite()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf]" started-at="2024-12-27T11:10:11 IST" name="faceBooksite" finished-at="2024-12-27T11:10:14 IST" duration-ms="3462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- faceBooksite -->
+        <test-method signature="group1()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf]" started-at="2024-12-27T11:10:14 IST" name="group1" finished-at="2024-12-27T11:10:14 IST" duration-ms="3" status="FAIL">
+          <exception class="java.lang.ArithmeticException">
             <message>
-              <![CDATA[expected [Create a Page for a celebrity, brand or business] but found [Create a Page for a celebrity, brand or business.]]]>
+              <![CDATA[/ by zero]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Create a Page for a celebrity, brand or business] but found [Create a Page for a celebrity, brand or business.]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at basicOfSelenium.BasicTestNgValidation.textValidation(BasicTestNgValidation.java:47)
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at testNG_AnnotationsAndAttributes.DependsOnGroup.group1(DependsOnGroup.java:20)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -49,15 +53,79 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.ArithmeticException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- textValidation -->
-        <test-method signature="titleValidation()[pri:0, instance:basicOfSelenium.BasicTestNgValidation@fbd1f6]" started-at="2024-12-23T11:27:24 IST" name="titleValidation" finished-at="2024-12-23T11:27:28 IST" duration-ms="4075" status="PASS">
+        </test-method> <!-- group1 -->
+        <test-method signature="googleSite()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf]" started-at="2024-12-27T11:10:14 IST" name="googleSite" depends-on-groups="groupB, groupA" finished-at="2024-12-27T11:10:14 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method DependsOnGroup.googleSite()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf] depends on not successfully finished methods in group "groupA"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method DependsOnGroup.googleSite()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf] depends on not successfully finished methods in group "groupA"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- titleValidation -->
-      </class> <!-- basicOfSelenium.BasicTestNgValidation -->
+        </test-method> <!-- googleSite -->
+        <test-method signature="group2and3()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf]" started-at="2024-12-27T11:10:14 IST" name="group2and3" depends-on-groups="groupA" finished-at="2024-12-27T11:10:14 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method DependsOnGroup.group2and3()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf] depends on not successfully finished methods in group "groupA"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method DependsOnGroup.group2and3()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf] depends on not successfully finished methods in group "groupA"
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- group2and3 -->
+        <test-method signature="youtubesite()[pri:0, instance:testNG_AnnotationsAndAttributes.DependsOnGroup@7a8c8dcf]" started-at="2024-12-27T11:10:14 IST" name="youtubesite" depends-on-groups="groupA" finished-at="2024-12-27T11:10:21 IST" duration-ms="6325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- youtubesite -->
+      </class> <!-- testNG_AnnotationsAndAttributes.DependsOnGroup -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
