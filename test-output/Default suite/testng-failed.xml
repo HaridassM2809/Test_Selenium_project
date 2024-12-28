@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG_AnnotationsAndAttributes.DependsOnGroup">
+      <class name="testNG_AnnotationsAndAttributes.ParametersInTestNG">
         <methods>
-          <include name="group1"/>
-          <include name="googleSite"/>
-          <include name="group2and3"/>
+          <include name="methoWithParameter"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- testNG_AnnotationsAndAttributes.DependsOnGroup -->
+      </class> <!-- testNG_AnnotationsAndAttributes.ParametersInTestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
