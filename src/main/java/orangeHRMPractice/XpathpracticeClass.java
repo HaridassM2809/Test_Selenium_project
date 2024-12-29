@@ -23,41 +23,63 @@ public class XpathpracticeClass {
 //		&&&&&&&&&&&&&&&&&&&&&&
 		
 		driver.findElement(By.xpath("//span[text() = 'PIM']")).click();
+//		driver.findElement(By.xpath("//label[text() = 'Job Title']//following::div")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//div[@role='listbox']//span[text()='Account Assistant']")).click();
+		
+//		driver.findElement(By.xpath("//label[text() = 'Sub Unit']//following::div")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//div[@role='listbox']//span[text()='Engineering']")).click();
 		
 //		&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-		driver.findElement(By.xpath("//span [contains(text(),'Configuration')]")).click();
-		Thread.sleep(2000);
-		driver.findElement(By.xpath("//a[text() = 'Optional Fields']")).click(); // configuration drop down
+//		driver.findElement(By.xpath("//span [contains(text(),'Configuration')]")).click();
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//a[text() = 'Optional Fields']")).click(); // configuration drop down
+		
+//		or
+		//span [contains(text(),'Configuration')]//following ::li//a[text() = 'Custom Fields']
 		
 //		Optional fields page 
-		driver.findElement(By.xpath("//h6 [text() = 'Show Deprecated Fields']//following-sibling :: div//div//div//label//span")).click();
-		driver.findElement(By.xpath("//p [text() = 'Show SSN field in Personal Details'] //following-sibling :: div//label//span")).click();
-		driver.findElement(By.xpath("//p [text() = 'Show SIN field in Personal Details'] //following-sibling :: div//label//span")).click();
-		driver.findElement(By.xpath("//p [text() = 'Show US Tax Exemptions menu'] //following-sibling :: div//label//span")).click();
-		//p [text() = 'Show SSN field in Personal Details'] //following-sibling :: div//label//span
+//		driver.findElement(By.xpath("//h6 [text() = 'Show Deprecated Fields']//following-sibling :: div//label//span")).click();
+//		driver.findElement(By.xpath("//p[text()='Show SSN field in Personal Details']//following-sibling::div//label//span")).click();
+//		driver.findElement(By.xpath("//p[text()='Show SIN field in Personal Details']//following-sibling::div//label//span")).click();
+//		driver.findElement(By.xpath("//p[text()='Show US Tax Exemptions menu']//following-sibling::div//label//span")).click();
+
 		
 //		&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& 
+//		PIM Home page
+		
 //		PIM empl name input 
-		//label [text() = 'Employee Name']/parent :: div/following-sibling::div/div/div/input [@placeholder = 'Type for hints...']
-//		driver.findElement(By.xpath("//label [text() = 'Employee Name']/parent :: div/following-sibling::div/div/div/input [@placeholder = 'Type for hints...']")).sendKeys("Adam756640");
+		//label[text()='Employee Name']//parent::div//following-sibling::div//input[@placeholder='Type for hints...']
+		driver.findElement(By.xpath("//label[text()='Employee Name']//parent::div//following-sibling::div//input[@placeholder='Type for hints...']")).sendKeys("Adam756640");
 		
 //		PIM empl id input 
-//		driver.findElement(By.xpath("//label [text() = 'Employee Id']/parent :: div/following-sibling::div/input [@ class='oxd-input oxd-input--active']")).sendKeys("12345");
-		
-//		Empl status dropdown
-//		driver.findElement(By.xpath("//label [text() = 'Employment Status']/parent :: div/following-sibling::div/div/div/div [@tabindex = '0']")).click();
-		
-//		include dropdown
-			//label [text() = 'Include']/parent :: div/following-sibling::div/div/div/div [@tabindex = '0']
+//		driver.findElement(By.xpath("//label[text()='Employee Id']//parent::div//following-sibling::div//input")).sendKeys("12345");
 		
 //		Supervisor Name
-		//label [text() = 'Supervisor Name']/parent :: div/following-sibling::div/div/div/input [@placeholder = 'Type for hints...']
+		//label[text()='Supervisor Name']//parent::div//following-sibling::div//input[@placeholder='Type for hints...']
+		
+//		Empl status dropdown
+		//first we need to click on dropdown then only we can see the drop down value
+		//label[text() = 'Employment Status']//following::div - to click on dropdown
+		//div[@role='listbox']//span [ text() = 'Full-Time Permanent'] - to select the dropdown value
+		
+		
+//		include dropdown
+		//first we need to click on dropdown then only we can see the drop down value
+		//label[text() = 'Include']//following::div - to click on dropdown
+		//div[@role='listbox']//span[text()='Past Employees Only'] - to select the dropdown value
+		
 		
 //		Job Title dropdown
-		//label [text() = 'Job Title']/parent :: div/following-sibling::div/div/div/div [@tabindex = '0']
+		//first we need to click on dropdown then only we can see the drop down value
+		//label[text() = 'Job Title']//following::div - to click on dropdown
+		//div[@role='listbox']//span[text()='Account Assistant'] - to select the dropdown value
 		
 //		Sub unit dropdown
-		//label [text() = 'Sub Unit']/parent :: div/following-sibling::div/div/div/div [@tabindex = '0']
+		//first we need to click on dropdown then only we can see the drop down value
+		//label[text() = 'Sub Unit']//following::div - to click on dropdown
+		//div[@role='listbox']//span [ text() = 'OrangeHRM'] - to select the dropdown value
 		
 //		Reset and Search button
 //		driver.findElement(By.xpath("//button [@type = 'reset']")).click();
@@ -66,9 +88,9 @@ public class XpathpracticeClass {
 //		To click the checkbox
 //		driver.findElement(By.xpath("//div[@role='columnheader']//div//label//span//i")).click();
 		
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollBy(0,1000)");
-		Thread.sleep(2000);
+//		JavascriptExecutor jse = (JavascriptExecutor) driver;
+//		jse.executeScript("window.scrollBy(0,1000)");
+//		Thread.sleep(2000);
 		
 		
 //		searched empl and clicked on edit 
@@ -78,7 +100,7 @@ public class XpathpracticeClass {
 //		driver.findElement(By.xpath("//div[@class='oxd-table-cell-actions']//button//i[@class='oxd-icon bi-trash']")).click();
 //		*******************************************
 //		Employee list page 
-		//a [text () = 'Employee List']
+		//a [contains(text (),'Employee List')]
 		
 //		&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 //		Add Employee page
